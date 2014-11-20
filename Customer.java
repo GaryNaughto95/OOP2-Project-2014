@@ -1,4 +1,4 @@
-// An instantiable class which models one customer
+// An instantiable class which the customers
 public class Customer {
 	
 	private int AccNo;	
@@ -15,7 +15,7 @@ public class Customer {
 	public int getMobileNumber() {return MobileNumber;}
 	public int getBalance() {return Balance;}
 	
-	// 'mutator' methods to change the value of an attribute
+	//mutator methods to change the value of an attribute
 	
 	public void setAccNo( int AccNo) {
 		
