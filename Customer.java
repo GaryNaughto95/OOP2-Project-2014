@@ -1,5 +1,8 @@
 // An instantiable class which the customers
-public class Customer {
+
+import java.io.*;
+
+public class Customer implements Serializable{
 	
 	private int AccNo;	
 	private String name;
