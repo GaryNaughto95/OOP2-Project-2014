@@ -5,7 +5,8 @@ import java.io.*;
 public class Customer implements Serializable{
 	
 	private int AccNo;	
-	private String name;
+	private String Forename;
+	private String Surname;
 	private String Address;
 	private int MobileNumber;
 	private int Balance;
@@ -13,7 +14,8 @@ public class Customer implements Serializable{
 	//accessor method that allow us to aceess the customer details
 	
 	public int getAccNo() {return AccNo;}
-	public String getName() { return name;}
+	public String getForename() { return Forename;}
+	public String getSurname() { return Surname;}
 	public String getAddress() {return Address;}
 	public int getMobileNumber() {return MobileNumber;}
 	public int getBalance() {return Balance;}
@@ -26,9 +28,15 @@ public class Customer implements Serializable{
 		
 	}
 	
-	public void setName( String name) {
+	public void setForename( String Forename) {
 		
-		this.name = name;
+		this.Forename = Forename;
+			
+	}
+	
+	public void setSurname( String Surname) {
+		
+		this.Surname = Surname;
 			
 	}
 	
@@ -52,10 +60,11 @@ public class Customer implements Serializable{
 
 	// full-args constructor
 	
-	public Customer(int AccNo, String name, String Address, int MobileNumber, int Balance) {
+	public Customer(int AccNo, String Forename, String Address, int MobileNumber, int Balance) {
 				
 				setAccNo(AccNo);
-				setName(name);
+				setForename(Forename);
+				setSurname(Surname);
 				setAddress(Address);
 				setMobileNumber(MobileNumber);
 				setBalance(Balance);

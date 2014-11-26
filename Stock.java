@@ -1,6 +1,8 @@
 // An instantiable class which all the stock
 
-public class Stock {
+import java.io.*;
+
+public class Stock implements Serializable{
 	
 	private String name;
 	private int Quantity;
