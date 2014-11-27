@@ -8,8 +8,8 @@ public class Customer implements Serializable{
 	private String Forename;
 	private String Surname;
 	private String Address;
-	private int MobileNumber;
-	private int Balance;
+	private long MobileNumber;
+	private long Balance;
 	
 	//accessor method that allow us to aceess the customer details
 	
@@ -17,8 +17,8 @@ public class Customer implements Serializable{
 	public String getForename() { return Forename;}
 	public String getSurname() { return Surname;}
 	public String getAddress() {return Address;}
-	public int getMobileNumber() {return MobileNumber;}
-	public int getBalance() {return Balance;}
+	public long getMobileNumber() {return MobileNumber;}
+	public long getBalance() {return Balance;}
 	
 	//mutator methods to change the value of an attribute
 	
@@ -46,13 +46,13 @@ public class Customer implements Serializable{
 			
 	}
 
-	public void setMobileNumber( int MobileNumber){
+	public void setMobileNumber( long MobileNumber){
 		
 		this.MobileNumber = MobileNumber;
 		
 	}
 	
-	public void setBalance( int Balance){
+	public void setBalance( long Balance){
 		
 		this.Balance = Balance;
 		
@@ -60,7 +60,7 @@ public class Customer implements Serializable{
 
 	// full-args constructor
 	
-	public Customer(int AccNo, String Forename, String Address, int MobileNumber, int Balance) {
+	public Customer() {
 				
 				setAccNo(AccNo);
 				setForename(Forename);
