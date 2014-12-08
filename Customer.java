@@ -3,30 +3,23 @@
 import java.io.*;
 
 public class Customer implements Serializable{
-	
-	private int AccNo;	
+		
 	private String Forename;
 	private String Surname;
 	private String Address;
-	private long MobileNumber;
-	private long Balance;
+	private int MobileNumber;
+	private int Balance;
 	
 	//accessor method that allow us to aceess the customer details
 	
-	public int getAccNo() {return AccNo;}
 	public String getForename() { return Forename;}
 	public String getSurname() { return Surname;}
 	public String getAddress() {return Address;}
-	public long getMobileNumber() {return MobileNumber;}
-	public long getBalance() {return Balance;}
+	public int getMobileNumber() {return MobileNumber;}
+	public int getBalance() {return Balance;}
 	
 	//mutator methods to change the value of an attribute
 	
-	public void setAccNo( int AccNo) {
-		
-		this.AccNo = AccNo;
-		
-	}
 	
 	public void setForename( String Forename) {
 		
@@ -46,13 +39,13 @@ public class Customer implements Serializable{
 			
 	}
 
-	public void setMobileNumber( long MobileNumber){
+	public void setMobileNumber( int MobileNumber){
 		
 		this.MobileNumber = MobileNumber;
 		
 	}
 	
-	public void setBalance( long Balance){
+	public void setBalance( int Balance){
 		
 		this.Balance = Balance;
 		
@@ -60,14 +53,26 @@ public class Customer implements Serializable{
 
 	// full-args constructor
 	
-	public Customer() {
+	public Customer(String Forename, String Surname, String Address, int MobileNumber, int Balance) {
 				
-				setAccNo(AccNo);
 				setForename(Forename);
 				setSurname(Surname);
 				setAddress(Address);
 				setMobileNumber(MobileNumber);
 				setBalance(Balance);
 				
-	}	
+	}
+	
+	public Customer(){
+		
+		this("Not Given","Not Given","Not Givin",0,0);
+		
+	}
+	
+	public String toString(){
+		
+		return "\nForename:  " + getForename() + "\nSurname: " + getSurname() + "\nAddress: " + getAddress() + "\nMobileNumber: 0" + getMobileNumber() + "\nBalance: " + getBalance();
+		
+	}
+		
 }

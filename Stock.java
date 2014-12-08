@@ -36,11 +36,17 @@ public class Stock implements Serializable{
 	
 	// full-arg constructor 
 	
-	public Stock(String name, int Quantity, int CostPerTon){
+	public Stock(){
 		
 		setName(name);
 		setQuantity(Quantity);
 		setCostPerTon(CostPerTon);
+		
+	}
+	
+	public String toString(){
+		
+		return "\nName: " + getName() + "\nQuantity " + getQuantity() + "Ton" + "\nCostPerTon " + "€" + getCostPerTon() ;
 		
 	}
 }
